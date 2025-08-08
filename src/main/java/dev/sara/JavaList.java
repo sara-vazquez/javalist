@@ -5,27 +5,27 @@ import java.util.List;
 
 public class JavaList {
 
-    private List<String> dias; 
+    public List<String> days; 
 
     public JavaList() {
 
-        dias = new ArrayList<>();
-        dias.add("Lunes");
-        dias.add("Martes");
-        dias.add("Miércoles");
-        dias.add("Jueves");
-        dias.add("Viernes");
-        dias.add("Sábado");
-        dias.add("Domingo");
+        days = new ArrayList<>();
+        days.add("Lunes");
+        days.add("Martes");
+        days.add("Miércoles");
+        days.add("Jueves");
+        days.add("Viernes");
+        days.add("Sábado");
+        days.add("Domingo");
 
-        System.out.println("ArrayList" + dias);
+        System.out.println("ArrayList" + days);
 
     }
 }
 /* 
 * 1. La clase debe tener los siguientes métodos:
 
-* Un método para crear la lista de los días de la semana
+* Un método para crear la lista de los días de la semana ✔︎
 * Un método que retorne los días de la semana
 * Un método que retorne el largo de la lista
 * Un método para eliminar un día de la semana
