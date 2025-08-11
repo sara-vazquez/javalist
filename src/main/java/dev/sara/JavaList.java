@@ -20,8 +20,6 @@ public class JavaList {
         days.add("Viernes");
         days.add("Sábado");
         days.add("Domingo");
-
-        System.out.println("ArrayList" + days);
     }
 
     public List<String> getDays() {
