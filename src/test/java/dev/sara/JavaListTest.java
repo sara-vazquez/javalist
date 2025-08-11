@@ -13,9 +13,9 @@ public class JavaListTest {
 
         javaList = new JavaList();
 
-        assertThat(javaList.days, hasSize(7));
-        assertThat(javaList.days.get(0), is("Lunes"));
-        assertThat(javaList.days.get(6), is("Domingo"));
+        assertThat(javaList.getDays(), hasSize(7));
+        assertThat(javaList.getDays().get(0), is("Lunes"));
+        assertThat(javaList.getDays().get(6), is("Domingo"));
     }   
 
     @Test
@@ -23,9 +23,7 @@ public class JavaListTest {
 
         JavaList javaList = new JavaList();
 
-        boolean removed = javaList.days.remove("Martes");
-
-        assertThat(removed, is(true));
-        assertThat(javaList.days, not(hasItem("Martes")));
+        assertThat(javaList.deleteDay("Martes"), is(true));
+        assertThat(javaList.getDays(), not(hasItem("Martes")));
     }
 }
