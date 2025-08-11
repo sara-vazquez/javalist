@@ -25,6 +25,10 @@ public class JavaList {
         return new ArrayList<>(days);
     }
 
+    public int getDaysCount() {
+        return days.size();
+    }
+
     public boolean deleteDay(String dayName) {
         
         return days.remove(dayName);
@@ -36,7 +40,7 @@ public class JavaList {
 * 1. La clase debe tener los siguientes métodos:
 
 * Un método para crear la lista de los días de la semana ✔︎
-* Un método que retorne los días de la semana
+* Un método que retorne los días de la semana ✔︎
 * Un método que retorne el largo de la lista
 * Un método para eliminar un día de la semana ✔︎
 * Un método que retorne el día de la semana solicitado
