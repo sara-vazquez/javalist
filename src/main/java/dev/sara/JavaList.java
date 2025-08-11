@@ -48,7 +48,7 @@ public class JavaList {
     }
 
     public void sortDaysAlphabetically() {
-        Collator collator = Collator.getInstance(new Locale("es", "ES"));
+        Collator collator = Collator.getInstance(Locale.forLanguageTag("es-ES"));
         collator.setStrength(Collator.PRIMARY);
         days.sort(collator);
     }

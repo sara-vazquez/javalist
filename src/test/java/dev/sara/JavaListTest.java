@@ -58,7 +58,7 @@ public class JavaListTest {
         JavaList javaList = new JavaList();
 
         javaList.sortDaysAlphabetically();
-        assertThat(javaList.getDays(), contains("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"));
+        assertThat(javaList.getDays(), contains("Domingo", "Jueves", "Lunes", "Martes", "Miércoles", "Sábado", "Viernes"));
     }
 }
 
