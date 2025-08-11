@@ -17,6 +17,13 @@ public class JavaListTest {
         assertThat(javaList.days, hasSize(7));
         assertThat(javaList.days.get(0), is("Lunes"));
         assertThat(javaList.days.get(6), is("Domingo"));
-
     }   
+
+    @Test
+    void testDelete_Days() {
+
+        JavaList deleteDay = new JavaList();
+
+        assertThat(deleteDay.remove("Martes"));
+    }
 }

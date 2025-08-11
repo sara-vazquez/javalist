@@ -21,13 +21,16 @@ public class JavaList {
         System.out.println("ArrayList" + days);
     }
 
-    public void DeleteDays() {
+    public void deleteDays(String dayName) {
         
-        days = new ArrayList<>();
-        String day = days.remove(4);
+        boolean removed = days.remove(dayName);
 
-        System.out.println("ArrayList" + days);
-        System.err.println("Removed Element" + days);
+        if (removed) {
+            System.out.println("Removed element: " + dayName);
+        } else {
+            System.out.println("El día no estaba en la lista");
+        }
+        System.out.println("ArrayList después de eliminar: " + days);
     }
 }
 /* 
