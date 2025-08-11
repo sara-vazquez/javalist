@@ -18,6 +18,13 @@ public class JavaListTest {
     } 
 
     @Test
+    void testGetDaysCount() {
+        JavaList javaList = new JavaList();
+
+        assertThat(javaList.getDaysCount(), is(7));
+    }
+
+    @Test
     void testDelete_Days() {
 
         JavaList javaList = new JavaList();
