@@ -1,10 +1,13 @@
 package dev.sara;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-
 import java.util.Optional;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
 import org.junit.jupiter.api.Test;
 
 public class JavaListTest {
@@ -48,6 +51,14 @@ public class JavaListTest {
         JavaList javaList = new JavaList();
 
         assertThat(javaList.containsDay("Jueves"), is(true));
+    }
+
+    @Test
+    void testSortAlphabetically() {
+        JavaList javaList = new JavaList();
+
+        javaList.sortDaysAlphabetically();
+        assertThat(javaList.getDays(), contains("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"));
     }
 }
 

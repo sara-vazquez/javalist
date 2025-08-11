@@ -1,7 +1,9 @@
 package dev.sara;
 
+import java.text.Collator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 public class JavaList {
@@ -43,6 +45,12 @@ public class JavaList {
 
     public boolean containsDay(String dayName) {
         return days.contains(dayName);
+    }
+
+    public void sortDaysAlphabetically() {
+        Collator collator = Collator.getInstance(new Locale("es", "ES"));
+        collator.setStrength(Collator.PRIMARY);
+        days.sort(collator);
     }
 
 }
