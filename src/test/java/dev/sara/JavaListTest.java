@@ -42,5 +42,12 @@ public class JavaListTest {
 
     assertThat(javaList.getDayByName("Miércoles"), is(Optional.of("Miércoles")));
 }
+
+    @Test
+    void testConteinsDay() {
+        JavaList javaList = new JavaList();
+
+        assertThat(javaList.getDays(), contains ("Jueves"));
+    }
 }
 
