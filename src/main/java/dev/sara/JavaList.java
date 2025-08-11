@@ -19,7 +19,15 @@ public class JavaList {
         days.add("Domingo");
 
         System.out.println("ArrayList" + days);
+    }
 
+    public void DeleteDays() {
+        
+        days = new ArrayList<>();
+        String day = days.remove(4);
+
+        System.out.println("ArrayList" + days);
+        System.err.println("Removed Element" + days);
     }
 }
 /* 
