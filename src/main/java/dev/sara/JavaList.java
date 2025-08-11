@@ -57,12 +57,3 @@ public class JavaList {
         days.clear();
     }
 }
-
-/* 
-* 1. La clase debe tener los siguientes métodos:
-
-* Un método para vaciar la lista
-
-
-Requisitos :
-* Se debe realizar un test unitario de cada método */
