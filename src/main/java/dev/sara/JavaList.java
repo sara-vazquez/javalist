@@ -5,7 +5,7 @@ import java.util.List;
 
 public class JavaList {
 
-    public List<String> days; 
+    private List<String> days; 
 
     public JavaList() {
 
@@ -21,16 +21,13 @@ public class JavaList {
         System.out.println("ArrayList" + days);
     }
 
-    public void deleteDays(String dayName) {
+    public boolean deleteDay(String dayName) {
         
-        boolean removed = days.remove(dayName);
+        return days.remove(dayName);
+    }
 
-        if (removed) {
-            System.out.println("Removed element: " + dayName);
-        } else {
-            System.out.println("El día no estaba en la lista");
-        }
-        System.out.println("ArrayList después de eliminar: " + days);
+    public List<String> getDays() {
+        return new ArrayList<>(days);
     }
 }
 /* 
