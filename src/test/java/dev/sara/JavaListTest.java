@@ -13,9 +13,9 @@ public class JavaListTest {
 
         javaList = new JavaList();
 
-       // assertThat(javaList.getDays(), hasSize(7));
+        assertThat(javaList.getDays(), hasSize(7));
         assertThat(javaList.getDays(), contains("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"));
-    }   
+    } 
 
     @Test
     void testDelete_Days() {
@@ -26,3 +26,4 @@ public class JavaListTest {
         assertThat(javaList.getDays(), not(hasItem("Martes")));
     }
 }
+

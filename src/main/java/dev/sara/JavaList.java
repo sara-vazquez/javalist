@@ -21,15 +21,17 @@ public class JavaList {
         System.out.println("ArrayList" + days);
     }
 
+    public List<String> getDays() {
+        return new ArrayList<>(days);
+    }
+
     public boolean deleteDay(String dayName) {
         
         return days.remove(dayName);
     }
 
-    public List<String> getDays() {
-        return new ArrayList<>(days);
-    }
 }
+
 /* 
 * 1. La clase debe tener los siguientes métodos:
 
