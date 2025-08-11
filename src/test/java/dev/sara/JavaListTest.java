@@ -47,7 +47,7 @@ public class JavaListTest {
     void testConteinsDay() {
         JavaList javaList = new JavaList();
 
-        assertThat(javaList.getDays(), contains ("Jueves"));
+        assertThat(javaList.containsDay("Jueves"), is(true));
     }
 }
 
