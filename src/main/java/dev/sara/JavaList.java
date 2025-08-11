@@ -2,6 +2,7 @@ package dev.sara;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class JavaList {
 
@@ -34,6 +35,13 @@ public class JavaList {
         return days.remove(dayName);
     }
 
+    public Optional<String> getDayByName(String name) {
+        return days.stream()
+
+                    .filter(day -> day.equals(name))
+                    .findFirst();
+    }
+
 }
 
 /* 
@@ -41,7 +49,7 @@ public class JavaList {
 
 * Un método para crear la lista de los días de la semana ✔︎
 * Un método que retorne los días de la semana ✔︎
-* Un método que retorne el largo de la lista
+* Un método que retorne el largo de la lista ✔︎
 * Un método para eliminar un día de la semana ✔︎
 * Un método que retorne el día de la semana solicitado
 * Un método que retorne si el día solicitado existe en la lista
