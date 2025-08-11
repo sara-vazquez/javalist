@@ -1,8 +1,7 @@
 package dev.sara;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 import org.junit.jupiter.api.Test;
 
 public class JavaListTest {
@@ -22,8 +21,11 @@ public class JavaListTest {
     @Test
     void testDelete_Days() {
 
-        JavaList deleteDay = new JavaList();
+        JavaList javaList = new JavaList();
 
-        assertThat(deleteDay.remove("Martes"));
+        boolean removed = javaList.days.remove("Martes");
+
+        assertThat(removed, is(true));
+        assertThat(javaList.days, not(hasItem("Martes")));
     }
 }
