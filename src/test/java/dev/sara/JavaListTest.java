@@ -2,6 +2,9 @@ package dev.sara;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 
 public class JavaListTest {
@@ -32,5 +35,12 @@ public class JavaListTest {
         assertThat(javaList.deleteDay("Martes"), is(true));
         assertThat(javaList.getDays(), not(hasItem("Martes")));
     }
+
+    @Test
+    void testGetDay() {
+    JavaList javaList = new JavaList();
+
+    assertThat(javaList.getDayByName("Miércoles"), is(Optional.of("Miércoles")));
+}
 }
 
