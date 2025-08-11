@@ -13,9 +13,8 @@ public class JavaListTest {
 
         javaList = new JavaList();
 
-        assertThat(javaList.getDays(), hasSize(7));
-        assertThat(javaList.getDays().get(0), is("Lunes"));
-        assertThat(javaList.getDays().get(6), is("Domingo"));
+       // assertThat(javaList.getDays(), hasSize(7));
+        assertThat(javaList.getDays(), contains("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"));
     }   
 
     @Test
