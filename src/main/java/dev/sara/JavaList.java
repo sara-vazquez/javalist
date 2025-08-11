@@ -53,6 +53,9 @@ public class JavaList {
         days.sort(collator);
     }
 
+    public void clearDays(){
+        days.clear();
+    }
 }
 
 /* 
